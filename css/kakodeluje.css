@@ -10602,3 +10602,27 @@ footer li {
   font-weight: 300;
   line-height: 20px;
 }
+
+/* line 215, ../sass/kakodeluje.scss */
+.info-small {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* line 220, ../sass/kakodeluje.scss */
+.info-big {
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 30px;
+  line-height: 1.8;
+}
+
+/* line 226, ../sass/kakodeluje.scss */
+.info-big-blue {
+  color: #1bb0ce;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 30px;
+  line-height: 1.8;
+}
