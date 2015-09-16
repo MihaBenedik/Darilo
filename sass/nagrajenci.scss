@@ -1,0 +1,222 @@
+
+@import "application.scss";
+
+$pagination_light_blue: #8cd7e6;
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+}
+
+
+
+.nagrajenci-wrapper{
+
+  background: #fff;
+  margin: 65px auto 0px auto;
+  padding: 25px;
+
+  max-width: 994px;
+  min-width: 768px;
+
+  @include border-radius(5px);
+  border-top: 2px solid $main_orange;
+
+
+  hr{
+    height: 2px;
+  }
+}
+
+
+#winners-list{
+
+  table{
+
+    margin-top: 30px;
+    font-weight: 300;
+    border-bottom: 2px solid $main_orange;
+
+    tr{
+
+      td{
+
+        border-top: 2px solid $main_orange;
+        vertical-align:middle;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        .winner-date{
+          font-size: 14px;
+          margin-bottom: 2px;
+        }
+        .winner-prize{
+          font-size: 20px;
+          color: $main_blue;
+          margin-bottom: 0px;
+        }
+        .winner-name{
+          font-size: 12px;
+          margin: 0;
+          font-weight: bold;
+        }
+        .winner-over18{
+          color: $main_blue;
+          font-weight: 300;
+        }
+        .winner-below18{
+          color: $main_magenta;
+          font-weight: 300;
+        }
+
+        .winner-data{
+          font-size: 12px;
+          margin: 0;
+        }
+        .winner-unknown{
+          padding-top: 26px;
+          font-weight: bold;
+          font-size: 12px;
+          margin: 0;
+        }
+
+      }
+
+    }
+
+  }
+
+
+  .winner-notification{
+    border: none;
+    font-size: 14px;
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+    @include border-radius(5px);
+    padding: 15px 0px;
+  }
+      .winner-notification-notify{
+        background: $main_blue;
+      }
+
+      .winner-notification-give{
+        background: $main_magenta;
+      }
+
+      .winner-notification-given{
+        background: #8dc63f;
+      }
+
+      .winner-notification-waiting{
+        background: $gray;
+        font-weight: 500;
+        color:#000;
+      }
+
+
+
+  .winner-td-gift{
+    padding-right: 15px !important;
+    padding-left: 0 !important;
+    max-width: 362px !important;
+
+  }
+  .winner-td-info{
+    padding-right: 10px !important;
+    padding-left: 0 !important;
+  }
+  .winner-td-info2{
+    padding-right: 15px !important;
+    padding-left: 0 !important;
+  }
+  .winner-td-status{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+}
+  /*** WINNERS LIST RESPONSIVE ADJUSTMENTS ***/
+
+        @media screen and (max-width: 991px) {
+
+          .nagrajenci-wrapper{
+            padding-right: 10px !important;
+            padding-left: 10px !important;
+          }
+
+          .winner-date{
+            font-size: 12px !important;
+          }
+          .winner-prize{
+            font-size: 16px !important;
+          }
+
+          .winner-td-info{
+            min-width: 150px;
+          }
+          .winner-td-info2{
+            min-width: 150px;
+          }
+
+          .winner-notification{
+            font-size: 11px !important;
+            padding-right: 5px !important;
+            padding-left: 5px !important;
+          }
+
+        }
+
+
+
+.pagination > li > .btn-pagination{
+  border: 1px solid $pagination_light_blue;
+  font-weight: bold;
+  color: $pagination_light_blue;
+}
+  .pagination > li > .btn-pagination-prev{
+    background: $pagination_light_blue url('temp/pagination-prev.png') no-repeat center;
+  }
+
+  .pagination > li > .btn-pagination-next{
+    background: $pagination_light_blue url('temp/pagination-next.png') no-repeat center;
+  }
+
+
+
+  .pagination-filler{
+    width: 8px;
+    height: 20px;
+  }
+
+    .pagination > li > .btn-pagination:hover, .pagination > li > .btn-pagination:focus {
+      background: $pagination_light_blue;
+      border: 1px solid $pagination_light_blue;
+      font-weight: bold;
+      color: #fff;
+    }
+    .pagination > li > .btn-pagination-prev:hover, .pagination > li > .btn-pagination-prev:focus {
+        background: $pagination_light_blue url('temp/pagination-prev.png') no-repeat center;
+        border: 1px solid $pagination_light_blue;
+        font-weight: bold;
+        color: $pagination_light_blue;
+    }
+    .pagination > li > .btn-pagination-next:hover, .pagination > li > .btn-pagination-next:focus {
+        background: $pagination_light_blue url('temp/pagination-next.png') no-repeat center;
+        border: 1px solid $pagination_light_blue;
+        font-weight: bold;
+        color: $pagination_light_blue;
+    }
+
+.pagination > li > .btn-pagination-prev:hover{
+  background: darken($pagination_light_blue, 15) url('temp/pagination-prev.png') no-repeat center;
+}
+.pagination > li > .btn-pagination-next:hover{
+  background: darken($pagination_light_blue, 15) url('temp/pagination-next.png') no-repeat center;
+}
+
+
+

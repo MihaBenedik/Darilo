@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <title>vsakdanjedarilo.si</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <meta charset="utf-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <link rel="stylesheet" media="all" href="css/fotogalerija.css" data-turbolinks-track="true" />
+
+  <script src="https://apis.google.com/js/platform.js" async defer>
+
+  </script>
+</head>
+<body>
+
+<div id="wrap">
+  <header>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#" class="navbar-brand logo indent-max"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Partnerji</a></li>
+            <li><a href="#">Popusti</a></li>
+            <li><a href="#">Objavi darilo</a></li>
+            <li><a href="#" class="nav-button">Prijava</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+  </header>
+
+
+  <!-- VSEBINA: TUKAJ VSTAVLJAJ SVOJO KODO -->
+
+
+        <div class="container" style="max-width: 994px;">
+
+            <div class="row">
+                <h1>Fotogalerija</h1>
+            </div>
+
+            <div class="row">
+                <div class="gallery-wrapper">
+
+                    <div id="gallery" class="gallery">
+                        <div class="gallery-image">
+
+                            <img src="gallery/galerija-1/Business-Presentation-Skills.jpg">
+                            <img src="gallery/galerija-1/business-presentation.jpg">
+                            <img src="gallery/galerija-1/greatpresentations1.jpg">
+                            <img src="gallery/galerija-1/man-standing-in-suit-near-four-business-people-looking-at-computer.jpg">
+                            <img src="gallery/galerija-1/maxresdefault.jpg">
+                            <img src="gallery/galerija-1/preparation-tips-for-business-presenting.jpg">
+                            <img src="gallery/galerija-1/Business-Presentation-Skills.jpg">
+                            <img src="gallery/galerija-1/business-presentation.jpg">
+                            <img src="gallery/galerija-1/maxresdefault.jpg">
+                            <img src="gallery/galerija-1/greatpresentations1.jpg">
+
+
+                        </div>
+                        <div class="clear"></div>
+
+                        <table class="gallery-buttons-wrap">
+                            <tr>
+                                <td class="fit-content"><button class="btn-gallery" id="btn-gallery-prev">Prejšna fotografija</button></td>
+                                <td style="text-align: center; padding: 0px 15px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus molestie ligula eget ligula tristique tempus. Aenean urna metus, ultricies sit amet venenatis eu, dapibus ac mi.</td>
+                                <td class="fit-content"><button class="btn-gallery" id="btn-gallery-next">Naslednja fotografija</button></td>
+                            </tr>
+                        </table>
+
+                        <div class="thumbnail">
+
+                            <div class="thumb"> <a href="#" > <img src="gallery/galerija-1/Business-Presentation-Skills.jpg"> </a> </div>
+                            <div class="thumb"> <a href="#" > <img src="gallery/galerija-1/business-presentation.jpg"> </a> </div>
+                            <div class="thumb"> <a href="#" > <img src="gallery/galerija-1/greatpresentations1.jpg"> </a> </div>
+                            <div class="thumb"> <a href="#" > <img src="gallery/galerija-1/man-standing-in-suit-near-four-business-people-looking-at-computer.jpg"> </a> </div>
+                            <div class="thumb"> <a href="#" > <img src="gallery/galerija-1/maxresdefault.jpg"> </a> </div>
+                            <div class="thumb"> <a href="#" > <img src="gallery/galerija-1/preparation-tips-for-business-presenting.jpg"> </a> </div>
+                            <div class="thumb"> <a href="#" > <img src="gallery/galerija-1/Business-Presentation-Skills.jpg"> </a> </div>
+                            <div class="thumb"> <a href="#" > <img src="gallery/galerija-1/business-presentation.jpg"> </a> </div>
+                            <div class="thumb"> <a href="#" > <img src="gallery/galerija-1/maxresdefault.jpg"> </a> </div>
+                            <div class="thumb"> <a href="#" > <img src="gallery/galerija-1/greatpresentations1.jpg"> </a> </div>
+
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+    <script>
+
+
+
+
+
+        /*!
+         * jQuery simple gallery Plugin 1.1.0
+         *
+         * http://fernandomoreiraweb.com/
+         *
+         * Copyright 2013 Fernando Moreira
+         * Released under the MIT license:
+         *   http://mit.fernandomoreiraweb.com/
+         */
+
+
+        ;(function($, window, document, undefined) {
+
+            $.fn.simplegallery = function(options) {
+
+                var defaults = {
+                    'galltime': 300,
+                    'gallcontent': '.gallery-image',
+                    'gallthumbnail': '.thumbnail',
+                    'gallthumb': '.thumb'
+                };
+
+                var settings = $.extend({}, defaults, options);
+
+                return this.each(function() {
+
+                    $(settings.gallthumb).click(function() {
+
+                        $(settings.gallcontent).find('img').stop(true,true).fadeOut(settings.galltime).hide();
+
+                        var index = $(this).index();
+
+                        //var img_attr = $(this).find('img').attr("id");
+                        //var image_id = img_attr.replace('thumb_', '');
+
+                        $('.gallery-image img').eq(index).stop(true,true).fadeIn(settings.galltime);
+                        return false;
+
+                    });
+
+                });
+
+            };
+
+        })(jQuery, window, document);
+
+
+
+
+        $(document).ready(function(){
+
+            thumbnail_resize_images();
+
+            $('#gallery').simplegallery({
+                galltime : 400, // transition delay
+                gallcontent: '.gallery-image',
+                gallthumbnail: '.thumbnail',
+                gallthumb: '.thumb'
+            });
+
+        });
+
+        function thumbnail_resize_images() {
+            var thumb_width = $('.thumb').eq(0).width();
+
+            /*
+            $('.thumb').each(function(){
+                $(this).css('height',thumb_width+'px');
+            });
+            */
+
+            $('.thumb a img').each(function(){
+                var img = $(this);
+                var img_w = $(this).width();
+                var img_h = $(this).height();
+
+                var max_side = Math.max(img_w, img_h);
+
+                if(img_w > img_h){
+                    var new_h = thumb_width;
+                    var new_w = img_w/img_h * thumb_width;
+                    var offset_x = (new_w - thumb_width) / 2;
+
+                    /*
+                    img.css('height',new_h+'px');
+                    img.css('width',new_w+'px'); */
+                    img.attr('height', new_h+'px');
+                    img.attr('width', new_w+'px');
+                    img.css('left','-'+offset_x+'px');
+
+                }
+                else{
+                    var new_w = thumb_width;
+                    var new_h = img_h/img_w * thumb_width;
+                    var offset_y = (new_h - thumb_width) / 2;
+
+                    img.css('height',new_h+'px');
+                    img.css('width',new_w+'px');
+                    img.css('top','-'+offset_y+'px');
+                }
+
+                /*
+                1. max(height, width)
+                2. min stranico nastaviš na thumb_width
+                3. max stranico daš max_dimension = max/min * thumb_width
+                4. offset na osi max daš na (max_dimenstion - thumb_width) / 2
+                 */
+            });
+
+            $('.thumb').each(function(){
+                $(this).css('height',thumb_width+'px');
+            });
+        }
+
+        $(window).on('resize', function(){
+            thumbnail_resize_images();
+        });
+
+
+        $('#btn-gallery-prev').click(function(){
+            var index = $("#gallery .gallery-image img:visible").eq(0).index();
+            if(index > 0){
+                $('.thumb:eq('+(index-1)+') a').trigger('click');
+            }
+        });
+
+        $('#btn-gallery-next').click(function(){
+            var index = $("#gallery .gallery-image img:visible").eq(0).index();
+            var lenght = $("#gallery .gallery-image img").length;
+            if(index < (lenght-1)){
+                $('.thumb:eq('+(index+1)+') a').trigger('click');
+            }
+        });
+
+    </script>
+
+
+
+  <!-- KONEC VSEBINE -->
+
+</div>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="bottom-40 top-20">
+          <div class="logo-footer"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2 col-sm-6">
+        <ul>
+          <li><a href="#">Domov</a></li>
+          <li><a href="#">O nas</a></li>
+          <li><a href="#">Partnerji</a></li>
+          <li><a href="#">Pravila in pogoji</a></li>
+          <li><a href="#">Kaj so darilne točke?</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <p class="lead white">Spremljajte nova darila!</p>
+        <p class="white">Kar je bilo, ne bo več. Kar bo, se še ne ve. Spremljajte nas na <strong><a href="#">družbenih omrežjih</a></strong>.</p>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="bottom-50">
+              <p class="lead white">Podarite darilo tudi vi</p>
+              <p><strong><a href="#">Pridružite se nam</a></strong></p>
+              <p class="white">Kontakt na info@vsakdanjedarilo.si</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="fb-page" data-href="http://www.facebook.com/vsakdanjedarilo?fref=ts" data-height="250" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="http://www.facebook.com/vsakdanjedarilo?fref=ts"><a href="http://www.facebook.com/vsakdanjedarilo?fref=ts">vsakdanjedarilo.si</a></blockquote></div></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

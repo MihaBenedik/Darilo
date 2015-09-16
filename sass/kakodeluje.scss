@@ -1,0 +1,218 @@
+
+@import "application.scss";
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+}
+
+
+.content{
+  /* max-width: 994px; */
+}
+
+
+.bcg-gradient-gray{
+
+  background: #f1f1f1; /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YxZjFmMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top,  #f1f1f1 0%, #ffffff 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f1f1f1), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #f1f1f1 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #f1f1f1 0%,#ffffff 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #f1f1f1 0%,#ffffff 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #f1f1f1 0%,#ffffff 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
+
+  padding-top: 45px;
+  padding-bottom: 90px;
+
+
+  .container .row{
+
+    padding: 0 15px;
+
+  }
+
+}
+
+
+.partner_default{
+
+  background-image:  url("partner_default.png");
+  background-size:   cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+}
+
+.img-partner{
+
+  height: auto;
+  width: 100%;
+  display: inline-block;
+
+}
+
+
+.reference_link {
+  padding: 30px 0px;
+  height: 120px;
+  width: 22.75%;
+  margin: 0 3% 0 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+
+  display:table;
+
+  .center-image-helper{
+    display:table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  img {
+    vertical-align: middle;
+    width: 100%;
+  }
+}
+
+
+    @media screen and (min-width: 768px) {  /* 768 992 */
+
+      .reference_link{
+        width: 22.75%;
+        margin: 0 3% 0 0;
+      }
+
+      .reference_link:nth-child(4n) {
+        margin: 0;
+      }
+
+    }
+
+    @media screen and (max-width: 767px) {
+
+      .reference_link{
+        width: 28%;
+        margin: 0 8% 0 0;
+        padding: 5px 0px;
+        height: 90px;
+      }
+
+      .reference_link:nth-child(3n) {
+        margin: 0;
+      }
+    }
+
+
+    @media screen and (max-width: 479px) {
+
+      .reference_link{
+        width: 38%;
+        margin: 0 6% 0 6%;
+        padding: 0px 0px;
+        height: 80px;
+      }
+
+      .reference_link:nth-child(3n) {
+        margin: 0 6% 0 6%;
+      }
+
+      .reference_link:nth-child(2n) {
+        margin: 0 6% 0 6%;
+      }
+    }
+
+
+
+.faq-wrapper{
+
+  background: #fff;
+  margin: 65px auto 0px auto;
+  padding: 25px;
+
+  @include border-radius(7px);
+  border-top: 2px solid $main_orange;
+
+
+  .question-panel {
+    background: $main_blue;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    width: 100%;
+    margin-bottom: 25px;
+    position: relative;
+    cursor: pointer;
+    padding: 15px 0;
+  }
+
+  .question-panel-selected{
+    @include border-radius(5px);
+    border-top: 3px solid $main_orange;
+    padding: 12px 0 15px 0;
+  }
+
+  .question-text{
+    padding: 0px 30px 0px 20px;
+    margin: 0;
+    width: 80%;
+    display: inline-block;
+  }
+
+  .faq-arrow{
+    background: url('temp/faq-arrows.png') no-repeat;
+    background-position: -0 -10px;
+    position: absolute;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    right: 25px;
+    bottom: 42%;
+  }
+
+  .faq-arrow-selected{
+    background-position: 0 0;
+  }
+
+
+
+  .answer-panel {
+    background: $gray;
+    border-radius: 5px;
+    color: #fff;
+    width: 100%;
+    margin-bottom: 25px;
+    position: relative;
+
+    padding: 19px 0;
+    display: none;
+
+  }
+    .answer-text{
+      padding: 0px 30px 0px 20px;
+      margin: 0;
+      display: inline-block;
+      color: #000;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 20px;
+    }
+
+}
+
+
+
+
+
+
+
+
